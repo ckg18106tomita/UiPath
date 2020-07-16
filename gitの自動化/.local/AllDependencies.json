@@ -1729,9 +1729,9 @@
     "restore": {
       "projectUniqueName": "コマンドプロンプトを起動",
       "projectName": "コマンドプロンプトを起動",
-      "projectPath": "C:\\Users\\18106\\Documents\\UiPath\\コマンドプロンプトを起動\\.local",
+      "projectPath": "C:\\Users\\18106\\Documents\\UiPath\\gitの自動化\\.local",
       "packagesPath": "C:\\Users\\18106\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\18106\\Documents\\UiPath\\コマンドプロンプトを起動\\.local"
+      "outputPath": "C:\\Users\\18106\\Documents\\UiPath\\gitの自動化\\.local"
     },
     "frameworks": {
       "net461": {
