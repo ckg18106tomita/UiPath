@@ -79,7 +79,7 @@
           <OutArgument x:TypeArguments="s:DateTime">[daystart]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="s:DateTime">[DateSerial(1994,5,1)]</InArgument>
+          <InArgument x:TypeArguments="s:DateTime">[DateSerial(2000,2,17)]</InArgument>
         </Assign.Value>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
