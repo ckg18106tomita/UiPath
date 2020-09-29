@@ -84,7 +84,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:IsMatch DisplayName="文字列の一致をチェック" sap:VirtualizedContainerService.HintSize="547,59" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[item]" IsBuilderTabModified="False" Pattern="[４-８]月" RegexOption="IgnoreCase, Compiled" Result="[kekka]" />
+                  <ui:IsMatch DisplayName="文字列の一致をチェック" sap:VirtualizedContainerService.HintSize="547,59" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[item]" IsBuilderTabModified="False" Pattern="[４-９]月" RegexOption="IgnoreCase, Compiled" Result="[kekka]" />
                   <If Condition="[kekka]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="547,427" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,280" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -96,9 +96,7 @@
                         <WriteLine DisplayName="1 行を書き込み" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="月次処理.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="処理月">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="処理月">[item]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                       </Sequence>
