@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="週次処理" this:週次処理.writeindex="C" this:週次処理.writebookname="fils\欠席時間集計表.xlsx" this:週次処理.ninzu="29" this:週次処理.bookname="fils\出席簿集計表_2020_C1_北村(スポーツテクノロジー学科 アスリートコース）.xlsm" this:週次処理.sheetname="８月" this:週次処理.writecolname="C" this:週次処理.readcol="AJ" this:週次処理.writesheetname="Sheet1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="週次処理" this:週次処理.writeindex="C" this:週次処理.writebookname="fils\出席率_大橋校（２年：渡邉）RPA (2)" this:週次処理.ninzu="29" this:週次処理.bookname="fils\出席簿集計表  コピー.xlsm" this:週次処理.sheetname="８月" this:週次処理.writecolname="C" this:週次処理.readcol="AJ" this:週次処理.writesheetname="2年情報メディア_8月 " xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="writeindex" Type="InArgument(x:String)" />
     <x:Property Name="writebookname" Type="InArgument(x:String)" />
@@ -63,11 +63,7 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:GenericValue[]" Name="kekkadate" />
       <Variable x:TypeArguments="x:Int32" Name="counter" />
-      <Variable x:TypeArguments="x:Int32" Name="startcol">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="5" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="5" Name="startcol" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -214,7 +210,7 @@
                           </Sequence>
                         </ui:InterruptibleWhile.Body>
                         <ui:InterruptibleWhile.Condition>
-                          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="counter&lt;ninzu" />
+                          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="counter&lt;ninzu" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
                         </ui:InterruptibleWhile.Condition>
                       </ui:InterruptibleWhile>
                     </Sequence>

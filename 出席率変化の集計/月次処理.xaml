@@ -128,7 +128,7 @@
                         <InArgument x:TypeArguments="x:Int32">0</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:InterruptibleWhile DisplayName="繰り返し (前判定)" sap:VirtualizedContainerService.HintSize="412,444" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                    <ui:InterruptibleWhile Condition="[counter&lt;5]" DisplayName="繰り返し (前判定)" sap:VirtualizedContainerService.HintSize="412,444" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
                       <ui:InterruptibleWhile.Body>
                         <Sequence DisplayName="本体" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
@@ -142,7 +142,7 @@
                                 <Literal x:TypeArguments="x:String">C</Literal>
                               </InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="writebookname">
-                                <Literal x:TypeArguments="x:String">fils\欠席時間集計表.xlsx</Literal>
+                                <Literal x:TypeArguments="x:String">出席率_大橋校（２年：渡邉）RPA (2)</Literal>
                               </InArgument>
                               <InArgument x:TypeArguments="x:Int32" x:Key="ninzu">
                                 <Literal x:TypeArguments="x:Int32" Value="29" />
@@ -174,9 +174,6 @@
                           </Assign>
                         </Sequence>
                       </ui:InterruptibleWhile.Body>
-                      <ui:InterruptibleWhile.Condition>
-                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="counter&lt;5" />
-                      </ui:InterruptibleWhile.Condition>
                     </ui:InterruptibleWhile>
                   </Sequence>
                 </If.Then>
