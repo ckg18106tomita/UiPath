@@ -1,8 +1,8 @@
-授業日数
+授業日数	lblClassDays
 { "T","AE","AP","BA", "BL"}
-授業時間数
+授業時間数	lblClassHour
 { "X", "AI", "AT", "BE", "BP"}
-欠席日数
+欠席日数	lblKesseki
 { "T", "AE", "AP", "BA", "BL"}
 遅刻回数
 { "V", "AG", "AR", "BC", "BN"}
